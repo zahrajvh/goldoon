@@ -1,0 +1,41 @@
+{% load static %}
+
+<nav>
+    <div class="navbar-org">
+        <div class="logo">
+            <img src="{% static 'assets/logo-org.png' %}" class="img-fluid logo-img">
+            اسم برند
+        </div>
+
+        <div class="navbar-items">
+            <ul class="p-0 m-0">
+                <li class="nav-item"><a href="/" class="active">صفحه اصلی</a></li>
+                <li class="nav-item"><a href="/flowers">گل ها</a></li>
+                <li class="nav-item"><a href="/processing">تشخیص نام گل</a></li>
+                <li class="nav-item"><a href="#">ارتباط با ما</a></li>
+                <li class="nav-item"><a href="/blog">وبلاگ</a></li>
+            </ul>
+        </div>
+
+        <div class="search-box d-flex">
+            <form action="{% url 'flower:search' %}" class="h-100 p-0 m-0 bg-danger" method="GET">
+                <input type="search" name="search" id="" class="h-100 m-0 search-input">
+                <button type="submit" class="search-button rounded-circle mx-2">
+                    <i class="fas fa-search"></i>
+                </button>
+            </form> 
+        </div>
+    </div>
+
+    <div class="btnav">
+        <div class='wrapper'>
+            <input class='dot-menu__checkbox' id='dot-menu' type='checkbox'>
+            <label class='dot-menu__label' for='dot-menu'>
+                <span>Menu</span>
+            </label>
+        </div>
+
+
+    </div>
+
+</nav>

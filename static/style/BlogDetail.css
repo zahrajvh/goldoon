@@ -1,0 +1,40 @@
+
+
+
+.Recent-Post {
+    border: 1px solid rgb(182, 182, 182);
+    border-radius: 10px;
+}
+
+.Recent-Post h5 {
+    color: green;
+    
+}
+.Recent-Post ul a{
+    transition: all .5s ease;
+}
+.Recent-Post ul a li{
+    list-style-type: square;
+}
+.Recent-Post ul a:hover{
+    color: rgb(255, 177, 88) !important;
+}
+
+.detail {
+    border: 1px solid rgb(182, 182, 182);
+    border-radius: 10px;
+    padding: 2rem 4rem;
+    text-align: justify;
+
+}
+.detail h4{
+    font-weight: bold;
+    color: green;
+
+}
+
+.date-time{
+    color: gray;
+    font-size: .85rem;
+    margin: 1rem 0;
+}

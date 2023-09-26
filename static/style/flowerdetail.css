@@ -1,0 +1,98 @@
+
+
+
+
+.flower {
+    width: 85%;
+}
+
+.inf-box {
+    position: relative;
+    border: 1px solid rgb(190, 190, 190);
+    border-radius: 10px;
+    max-height: 65vh;
+    overflow-y: auto;
+    direction: rtl !important;
+    padding-bottom: 1rem;
+}
+
+-webkit-scrollbar {
+    width: 10px;
+    background-color: #aaffb5;
+}
+
+-webkit-scrollbar-thumb:hover {
+    background-color: darkred;
+}
+
+
+.inf-sec .inf-content {
+    padding: 0 1.4rem;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: green;
+    border-radius: 5px;
+}
+
+.inf-photo {
+    background-color: #f24040;
+    max-height: 65vh;
+    border: 1px solid rgb(190, 190, 190);
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.inf-photo img {
+    width: 100%;
+    object-fit: cover;
+    transform-origin: center center;
+}
+
+.flower .title {
+    height: 2.8rem;
+    width: fit-content;
+    clip-path: polygon(0 0, 100% 0%, 100% 100%, 34% 100%);
+    position: sticky;
+    top: 0;
+    right: 0;
+    background-color: #a8d586;
+    padding: .65rem .65rem .65rem 3.2rem;
+    margin-bottom: .8rem;
+}
+
+.jk {
+    content: '';
+    /* position: absolute; */
+    margin-bottom: 1rem;
+    border-radius: 10px;
+    background-color: #5ea29e;
+    width: 100px;
+    height: 5px;
+}
+
+.short-information span {
+    position: relative;
+    color: green;
+    font-weight: bold;
+}
+.flower h2{
+    position: relative;
+    width: fit-content;
+}
+.poly {
+    background-color: #65a25e;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-clip-path: polygon(47.5% 5.66987%, 48.2899% 5.30154%, 49.13176% 5.07596%, 50% 5%, 50.86824% 5.07596%, 51.7101% 5.30154%, 52.5% 5.66987%, 87.14102% 25.66987%, 87.85495% 26.16978%, 88.47124% 26.78606%, 88.97114% 27.5%, 89.33948% 28.2899%, 89.56505% 29.13176%, 89.64102% 30%, 89.64102% 70%, 89.56505% 70.86824%, 89.33948% 71.7101%, 88.97114% 72.5%, 88.47124% 73.21394%, 87.85495% 73.83022%, 87.14102% 74.33013%, 52.5% 94.33013%, 51.7101% 94.69846%, 50.86824% 94.92404%, 50% 95%, 49.13176% 94.92404%, 48.2899% 94.69846%, 47.5% 94.33013%, 12.85898% 74.33013%, 12.14505% 73.83022%, 11.52876% 73.21394%, 11.02886% 72.5%, 10.66052% 71.7101%, 10.43495% 70.86824%, 10.35898% 70%, 10.35898% 30%, 10.43495% 29.13176%, 10.66052% 28.2899%, 11.02886% 27.5%, 11.52876% 26.78606%, 12.14505% 26.16978%, 12.85898% 25.66987%);
+    clip-path: polygon(47.5% 5.66987%, 48.2899% 5.30154%, 49.13176% 5.07596%, 50% 5%, 50.86824% 5.07596%, 51.7101% 5.30154%, 52.5% 5.66987%, 87.14102% 25.66987%, 87.85495% 26.16978%, 88.47124% 26.78606%, 88.97114% 27.5%, 89.33948% 28.2899%, 89.56505% 29.13176%, 89.64102% 30%, 89.64102% 70%, 89.56505% 70.86824%, 89.33948% 71.7101%, 88.97114% 72.5%, 88.47124% 73.21394%, 87.85495% 73.83022%, 87.14102% 74.33013%, 52.5% 94.33013%, 51.7101% 94.69846%, 50.86824% 94.92404%, 50% 95%, 49.13176% 94.92404%, 48.2899% 94.69846%, 47.5% 94.33013%, 12.85898% 74.33013%, 12.14505% 73.83022%, 11.52876% 73.21394%, 11.02886% 72.5%, 10.66052% 71.7101%, 10.43495% 70.86824%, 10.35898% 70%, 10.35898% 30%, 10.43495% 29.13176%, 10.66052% 28.2899%, 11.02886% 27.5%, 11.52876% 26.78606%, 12.14505% 26.16978%, 12.85898% 25.66987%);
+    z-index: -2;
+    transform: translate(-20%, -35%);
+    width: 5.5rem;
+    height: 5.5rem;
+}

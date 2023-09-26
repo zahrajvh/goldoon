@@ -1,0 +1,41 @@
+{% extends "Base.html" %}
+
+{{blog}}
+
+
+{% block content %}
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-4">
+                <div class="Recent-Post p-4">
+                    <h5 class="text-center">
+                        مطالب اخیر
+                    </h5>
+                    <ul>
+                        {% for blog in recents %}
+                        <a href="{% url 'blog:blog_detail' blog.id %}">
+                            <li class="mb-2"> {{blog.title}} </li>
+                        </a>
+                        {% endfor %}
+                    </ul>
+                </div>
+            </div>
+            <div class="col-8">
+                <div class="detail">
+                    <h4 class="text-center"> {{blog.title}} </h4>
+                    <div class="date-time"> {{blog.created_at | date}} </div>
+                    <p class="mt-4 text-muted">
+                        {{blog.description}}
+                    </p>
+                    <p>
+                        {{blog.context}}
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock content %}
+

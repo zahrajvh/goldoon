@@ -1,0 +1,82 @@
+
+{% extends 'Base.html' %}
+{% load static %}
+
+{% block content %}
+
+    <!-- flower information section -->
+
+    <section>
+        
+
+        <div class="container flower d-flex flex-column align-items-center">
+            <H2 class="text-center mb-4">
+                {{flower.name}}
+                <span class="poly"> </span>
+
+            </H2>
+            <div class="row">
+                <div class="col-4">
+                    <div class="maintenance inf-box">
+                        <!-- title -->
+                        <div class="title">
+                            <h5>
+                                شیوه نگهداری
+                            </h5>
+                        </div>
+                        <!-- end title -->
+                        <div class="inf-content">
+                            <p>
+                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum commodi placeat
+                                quisquam
+                                culpa quam voluptatibus aliquam recusandae reprehenderit modi, inventore sapiente quasi
+                                explicabo itaque dolorum velit repellat facere ullam dolore, aspernatur vero maiores
+                                temporibus eos ipsa! Amet totam deleniti mollitia iusto? Aliquam ea consequuntur nostrum
+                                recusandae dolorum quas animi facere.
+                            </p>
+                            <div class="jk"></div>
+                            <div class="Short-information">
+                                <div class="water mb-2">
+                                    <span>
+                                        میزان آب مورد نیاز:
+                                    </span>
+                                </div>
+                                <div class="weather">
+                                    <span>
+                                        آب و هوای مناسب:
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-5">
+                    <div class="introduction  inf-box">
+                        <!-- title -->
+                        <div class="title">
+                            <h5>
+                                معرفی
+                            </h5>
+                        </div>
+                        <!-- end title -->
+                        <p class="inf-content">
+                            {{ flower.description }}
+                        </p>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="flower-image inf-photo">
+                        <img src="{{ flower.photo.url }}" class="img-fluid" alt="">
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+
+{% endblock content %}

@@ -1,0 +1,58 @@
+{% extends 'Base.html' %}
+
+
+{% block content %}
+
+<!-- flower page -->
+<section>
+    <div class="container">
+        <div class="filter mb-4">
+            <h3>نتایج جستجو</h3>
+        </div>
+        <div class="row">
+            {% for flower in flower_list %}
+            <div class="col-3">
+                <a href="{% url 'flower:detail' flower.id %}">
+                    <div class="flower-box {{flower.type_flower}} my-2">
+                        <div class="image">
+                            <img src="{{ flower.photo.url }}" class="object-fit-cover img-fluid w-100 h-100" alt="">
+                        </div>
+                        <div class="content">
+                            <div class="name">
+                                {{ flower.name }}
+                            </div>
+                            <div class="type">
+                                {{ flower.get_type_flower_display }}
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+
+
+
+    {% endblock %}
+
+
+    <div class="aaaa">
+
+    </div>
+
+
+
+
+
+    <!-- bootstrap js -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/8722263165.js" crossorigin="anonymous"></script>
+    <script src="js/all.min.js"></script>
+    <!-- script -->
+    <script src="js/FlowerPage.js"></script>
+    </body>
+
+    </html>

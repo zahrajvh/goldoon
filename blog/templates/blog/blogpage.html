@@ -1,0 +1,202 @@
+{% extends 'Base.html' %}
+{% load static %}
+
+{% block content %}
+
+
+<!-- header -->
+<section>
+    <header>
+
+        <div class="header text-center mt-4 p-0">
+            <div class="web-header m-0 p-0">
+                <img src="{% static 'assets/header-web.png' %}" class="img-fluid web-img">
+                <div class="content-header">
+                    <h1 class="web-title-header">
+                        اینجا مکان نوشتن تایتل است
+                    </h1>
+                    <p class="web-para-header"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae
+                        culpa tempore quo. Blanditiis, labore amet.</p>
+                    <div class="search-web">
+                        <input type="search" class="web-search-header">
+                        <div class="search-icon-header"><i class="fas fa-search"></i></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </header>
+</section>
+<!-- end header -->
+
+
+<section>
+    <div class="bg-pop">
+        <div class="row popular-box d-flex justify-content-center align-items-end">
+            <div class="col-3 ">
+                <h2>Shop Plant</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+            </div>
+            <div class="col-3">
+                <div class="row p-0 m-0 d-flex justify-content-center align-items-end">
+                    <div class="col-7 p-0 m-0">
+                        <img src="{% static 'assets/1.png' %}" class="d-inline img-fluid">
+                    </div>
+                    <div class="col-5 p-0 m-0">
+                        <p>Lorem, ipsum.</p>
+                        <p>Lorem ipsum dolor sit.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="row p-0 m-0 d-flex justify-content-center align-items-end">
+                    <div class="col-7 p-0 m-0">
+                        <img src="{% static 'assets/2.png' %}" class="d-inline img-fluid">
+                    </div>
+                    <div class="col-5 p-0 m-0">
+                        <p>Lorem, ipsum.</p>
+                        <p>Lorem ipsum dolor sit.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-3">
+                <div class="row p-0 m-0 d-flex justify-content-center align-items-end">
+                    <div class="col-7 p-0 m-0">
+                        <img src="{% static 'assets/3.png' %}" class="d-inline img-fluid">
+                    </div>
+                    <div class="col-5 p-0 m-0">
+                        <p>Lorem, ipsum.</p>
+                        <p>Lorem ipsum dolor sit.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</section>
+
+
+
+
+
+<!-- Popular plant -->
+<section>
+    <div class="row popular d-flex align-items-center">
+        <div class="col-3">
+            <h4 class="fw-bold pop-title">
+                گیاهان محبوب
+            </h4>
+            <p class="des-popular mt-4">
+                آنچه دیگران دوست دارند را ببینید
+            </p>
+            <button class="mt-4 btn btn-info btn-popular d-flex align-items-center justify-content-center">
+                بیشتر
+                <i class="fas fa-angle-double-left mx-1"></i>
+            </button>
+        </div>
+        <div class="col-3">
+            <div class="popular-card">
+                <img src="{% static 'assets/galina-n-miziNqvJx5M-unsplash.jpg' %}" class="pop-img img-fluid">
+                <div class="footer-card d-flex flex-column justify-content-start align-items-center">
+                    <p class="grouping mt-2">دسته بندی گیاه</p>
+                    <h5 class="pop-plant-name">نام گیاه</h5>
+                    <span class="read-more">اطلاعات بیشتر</span>
+                    <span class="Square"></span>
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="popular-card">
+                <img src="{% static 'assets/kara-eads-EbLX7oRo4vI-unsplash.jpg' %}" class="pop-img img-fluid">
+                <div class="footer-card d-flex flex-column justify-content-start align-items-center">
+                    <p class="grouping mt-2">دسته بندی گیاه</p>
+                    <h5 class="pop-plant-name">نام گیاه</h5>
+                    <span class="read-more">اطلاعات بیشتر</span>
+                    <span class="Square"></span>
+                </div>
+            </div>
+        </div>
+        <div class="col-3">
+            <div class="popular-card">
+                <img src="{% static 'assets/toa-heftiba-W1yjvf5idqA-unsplash.jpg' %}" class="pop-img img-fluid">
+                <div class="footer-card d-flex flex-column justify-content-start align-items-center">
+                    <p class="grouping mt-2">دسته بندی گیاه</p>
+                    <h5 class="pop-plant-name">نام گیاه</h5>
+                    <span class="read-more">اطلاعات بیشتر</span>
+                    <span class="Square"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Popular plant -->
+
+
+
+
+<!-- weblogs sec -->
+
+<section>
+    <div class="container wbs text-center">
+        <div class="title-section">
+            <h3 class="title-weblog-section">
+                فهرست مطالب
+                <span class="poly"> </span>
+            </h3>
+        </div>
+
+
+
+        <div class="row">
+
+            <div class="col-3 categories-list">
+                <ul>
+                    <li class="category-title active" data-id="0">
+                        همه
+                    </li>
+                    {% for category in categories %}
+                    <li class="category-title" data-id="{{ category.id }}">
+                        {{ category.title }}
+                    </li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+            <div class="col-9 blog-list">
+                
+                    {% for blog in blogs %}
+                    <a href="{% url 'blog:blog_detail' blog.id %}">
+                        <div class="blog row w-100  bg-white" data-category-id="{{ blog.category.id }}"
+                            style="display: flex;">
+                            <div class="col-3 text-center title-blog" data-hover="دیدن مطلب...">
+                                {{ blog.title }}
+                                <span class="jk"> </span>
+                            </div>
+                            <div class="col-6 description-blog">
+                                <p>
+                                    {{ blog.description }}
+                                </p>
+                            </div>
+                            <div class="col-3 bg-info p-0 img-blog">
+                                <img src="{{ blog.image.url }}" alt="" class="img-fluid">
+
+                            </div>
+                        </div>
+                    </a>
+
+                    {% endfor %}
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+{% endblock content %}

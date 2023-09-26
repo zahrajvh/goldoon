@@ -1,0 +1,73 @@
+
+
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- BootStrap -->
+    <link rel="stylesheet" href="{% static 'style/bootstrap.rtl.min.css' %}">
+    <!-- main style -->
+    <link rel="stylesheet" href="{% static 'style/HomePage.css' %}">
+    <link rel="stylesheet" href="{% static 'style/flowerdetail.css' %}">
+    <link rel="stylesheet" href="{% static 'style/webpage.css' %}">
+    <link rel="stylesheet" href="{% static 'style/FlowerPage.css' %}">
+    <link rel="stylesheet" href="{% static 'style/processingPage.css' %}">
+    <link rel="stylesheet" href="{% static 'style/BlogDetail.css' %}">
+
+
+    <!-- animate -->
+    <link rel="stylesheet" href="{% static 'style/animate.css' %}" />
+
+
+
+    <title>Home</title>
+</head>
+
+<body>
+
+
+    <!-- header -->
+    <section>
+        <header>
+
+            <!-- navbar -->
+                {% include "partials/_navbar.html" %}
+
+
+        </header>
+    </section>
+    <!-- end header -->
+
+
+    {% block content %}
+    {% endblock content %}
+
+
+    
+    {% comment %} <div class="alaki">
+
+    </div> {% endcomment %}
+
+
+
+
+
+    <!-- bootstrap js -->
+    <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/8722263165.js" crossorigin="anonymous"></script>
+    <script src="{% static 'js/all.min.js' %}"></script>
+    <!-- script -->
+    <script src="{% static 'js/Homescript.js' %}"></script>
+    <script src="{% static 'js/WebScript.js' %}"></script>
+    <script src="{% static 'js/FlowerPage.js' %}"></script>
+    <script src="{% static 'js/processingPage.js' %}"></script>
+
+
+
+</body>
+
+</html>

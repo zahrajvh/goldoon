@@ -1,0 +1,65 @@
+{% extends 'Base.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<!-- flower page -->
+<section>
+    <div class="container">
+        <div class="filter mb-4">
+            <button type="button" class="btn btn-success all">همه</button>
+            <button type="button" class="btn btn-success apartment">آپارتمانی</button>
+            <button type="button" class="btn btn-success garden">باغچه ای</button>
+            <button type="button" class="btn btn-success ornamental">زینتی</button>
+
+        </div>
+        <div class="row">
+            {% for flower in flowers %}
+            <div class="col-3">
+                <a href="{% url 'flower:detail' flower.id %}">
+                    <div class="flower-box {{flower.type_flower}} my-2">
+                        <div class="image">
+                            <img src="{{ flower.photo.url }}" class="object-fit-cover img-fluid w-100 h-100" alt="">
+                        </div>
+                        <div class="content">
+                            <div class="name">
+                                {{ flower.name }}
+                            </div>
+                            <div class="type">
+                                {{ flower.get_type_flower_display }}
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+
+
+
+    {% endblock %}
+
+
+    <div class="aaaa">
+
+    </div>
+
+
+
+
+
+    <!-- bootstrap js -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/8722263165.js" crossorigin="anonymous"></script>
+    <script src="js/all.min.js"></script>
+    <!-- script -->
+    <script src="{% static 'js/FlowerPage.js' %}"></script>
+
+    {% comment %} <script src="js/FlowerPage.js"></script> {% endcomment %}
+    </body>
+
+    </html>

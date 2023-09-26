@@ -1,0 +1,17 @@
+{{ result }}
+
+
+<h1>نتیجه:</h1>
+   <p>اسم گل: {{ result }}</p>
+   {% if flower %}
+     <p>جزئیات گل:</p>
+     <ul>
+       <li>نام: {{ flower.name }}</li>
+       <li>توضیحات: {{ flower.description }}</li>
+       <!-- سایر ویژگی های گل -->
+     </ul>
+   {% else %}
+     <p>گل مورد نظر یافت نشد.</p>
+   {% endif %}
+
+   

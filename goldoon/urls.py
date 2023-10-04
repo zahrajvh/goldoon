@@ -20,14 +20,13 @@ from django.conf import settings
 from django.conf.urls.static import static
 from django.urls import include
 
-
 from . import views
-
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',  include('flower.urls')),
     # path('',  include('blog.urls')),
+    path('alli/', views.all_models, name='all_models'),
     path('processing/',  include('Image_Processing.urls')),
     path('blog/',  include('blog.urls'))
 ]

@@ -18,8 +18,11 @@
                     <p class="web-para-header"> Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae
                         culpa tempore quo. Blanditiis, labore amet.</p>
                     <div class="search-web">
-                        <input type="search" class="web-search-header">
-                        <div class="search-icon-header"><i class="fas fa-search"></i></div>
+                        <form action="{% url 'flower:search' %}" class="p-0 m-0" method="GET">
+                            <input type="search" name="search" class="web-search-header">
+                            <button type="submit"  class=" btn btn-info search-button-header"><i class="fas fa-search"></i></button>
+                        </form> 
+                        
                     </div>
                 </div>
             </div>

@@ -11,6 +11,7 @@ def process(request):
         processing = Processing_form(request.POST, request.FILES)
         image = request.FILES.get('photo')
         result = classify_flower(image)
+        print(result)
 
         Flower_detected = flower.objects.get(name=result)
         context = {

@@ -9,17 +9,17 @@
 
         <div class="navbar-items">
             <ul class="p-0 m-0">
-                <li class="nav-item"><a href="/" class="active">صفحه اصلی</a></li>
-                <li class="nav-item"><a href="/flowers">گل ها</a></li>
-                <li class="nav-item"><a href="/processing">تشخیص نام گل</a></li>
+                <li class="nav-item {% if request.path == '/' %}active{% endif %}"><a href="/" >صفحه اصلی</a></li>
+                <li class="nav-item {% if request.path == '/flowers/' %}active{% endif %}"><a href="/flowers">گل ها</a></li>
+                <li class="nav-item {% if request.path == '/processing/' %}active{% endif %}"><a href="/processing">تشخیص نام گل</a></li>
                 <li class="nav-item"><a href="#">ارتباط با ما</a></li>
-                <li class="nav-item"><a href="/blog">وبلاگ</a></li>
+                <li class="nav-item {% if request.path == '/blog/' %}active{% endif %}"><a href="/blog">وبلاگ</a></li>
             </ul>
         </div>
 
         <div class="search-box d-flex">
-            <form action="{% url 'flower:search' %}" class="h-100 p-0 m-0 bg-danger" method="GET">
-                <input type="search" name="search" id="" class="h-100 m-0 search-input">
+            <form action="{% url 'flower:search' %}" class="p-0 m-0" method="GET">
+                <input type="search" name="search" id="" class="m-0 search-input">
                 <button type="submit" class="search-button rounded-circle mx-2">
                     <i class="fas fa-search"></i>
                 </button>

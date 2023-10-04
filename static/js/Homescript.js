@@ -114,14 +114,16 @@ document.querySelector(".video-Preview").addEventListener("click", function(){
 //     video.classList.remove("play-vid");
     
 // })
+const video_org = document.querySelector(".video-org");
 
 closeicon.addEventListener("click", function(e){
+    video_org.pause();
     video.classList.remove("play-vid");
     e.preventDefault();
-    console.log("dddd");
 })
 
 
+// FAQ
 // FAQ
 
 const title = document.querySelectorAll('.accordion-title');
@@ -139,12 +141,48 @@ title.forEach(item => {
             // +
 
         }else{
-            content.style.height = (content.scrollHeight) + 'px';
+            content.style.height = (content.scrollHeight+80) + 'px';
             content.style.padding = '1.8rem 2.5rem';
-            content.style.padding = '1.8rem 2.5rem';
-            content.style.overflow = "scroll";
+            // content.style.padding = '1.8rem 2.5rem';
+            // content.style.overflow = "scroll";
             // -
         }
     })
 } )
 
+
+
+
+
+
+
+
+
+
+
+
+
+var animateButton = function(e) {
+
+    e.preventDefault;
+    //reset animation
+    e.target.classList.remove('animate');
+    
+    e.target.classList.add('animate');
+    setTimeout(function(){
+      e.target.classList.remove('animate');
+    },700);
+  };
+  
+  var bubblyButtons = document.getElementsByClassName("bubbly-button");
+  
+  for (var i = 0; i < bubblyButtons.length; i++) {
+    bubblyButtons[i].addEventListener('click', animateButton, false);
+  }
+
+  document.querySelector('.process-link').addEventListener('click', function(event) {
+    event.preventDefault(); // اجرای پیش‌فرض کلیک روی لینک را لغو می‌کند
+    setTimeout(function() {
+      window.location.href = "/processing"; // انتقال کاربر به لینک مورد نظر پس از شروع تأخیر
+    }, 1000); // تأخیر را می‌توانید تنظیم کنید. در این مثال، تأخیر یک ثانیه است.
+  });

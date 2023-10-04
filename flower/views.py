@@ -1,5 +1,7 @@
 from django.shortcuts import render
 from .models import flower
+from blog.models import blog
+
 
 # Create your views here.
 def flower_list(request):
@@ -28,3 +30,10 @@ def search(request):
         q =request.GET.get("search")
     flower_list = flower.objects.filter(name__icontains=q)
     return render(request, "flower/searchresult.html" , {"flower_list": flower_list})
+
+
+
+def decoration(request):
+    model1_objects = flower.objects.all()
+    model2_objects = blog.objects.all()
+    return render(request, 'all.html', {'model1_objects': model1_objects, 'model2_objects': model2_objects})
